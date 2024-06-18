@@ -8,7 +8,7 @@ class AnimeController extends Controller
 {
   public function homepage () {
        $response = Http::get('https://api.jikan.moe/v4/genres/anime')->json();
-       dd($response);
+      
         return view('homepage', ['data' => $response['data']]);
     }
 }
