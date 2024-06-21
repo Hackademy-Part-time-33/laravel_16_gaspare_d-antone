@@ -11,4 +11,11 @@ class AnimeController extends Controller
       
         return view('homepage', ['data' => $response['data']]);
     }
+
+    public function genre($id){
+      $response = Http::get('https://api.jikan.moe/v4/anime?genres=' . $id)->json();
+      return view('list-genre', ['data' => $response['data']]);
+
+    }
+
 }
