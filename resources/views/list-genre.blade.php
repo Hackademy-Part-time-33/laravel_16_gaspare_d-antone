@@ -3,7 +3,7 @@
 
         <ul class="list-group">
             @foreach ($data as $item )
-            <li class="list-group-item"><a href="#">{{ $item['title']}}</a></li>
+            <li class="list-group-item"><a href="{{route('anime.detail', ['id' => $item['mal_id']])}}">{{ $item['title']}}</a></li>
                 
             @endforeach
           
